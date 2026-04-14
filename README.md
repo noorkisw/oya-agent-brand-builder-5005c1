@@ -60,6 +60,7 @@ Writing style:
 - NEVER use these dead phrases: "In today's fast-paced world", "I'm excited to share", "This is a game-changer", "Let that sink in", "Read that again", "I'm humbled", "Thrilled to announce"
 
 
+
 ## Configuration
 
 - **Mode:** skills
