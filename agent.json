@@ -301,7 +301,7 @@
       "schedule_cron": "0 17 * * 0",
       "prompt": "Update Weekly Metrics and post a weekly summary to Slack.\n\nStep 0 \u2014 Retrieve spreadsheet_id from memory. Use THAT spreadsheet for all operations.\n\n1. Count posts published this week from the Content Log\n2. Count total engagement actions (comments, reactions, connection requests) from the Content Log\n3. Note the top-performing post (based on any engagement signals you have)\n4. Update the Weekly Metrics sheet with this week's data\n5. Post a summary to Slack:\n   - Posts this week: [count]\n   - Engagement actions: [count]\n   - Top performer: [link]\n   - Streak: [days] days\n   - Connection requests sent: [count]\n   - Next week's content themes to explore\n6. Add 5 new content ideas to the Content Ideas sheet based on what worked this week\n",
       "output_channel": "",
-      "is_active": true
+      "is_active": false
     },
     {
       "name": "Daily Status Report",
