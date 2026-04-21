@@ -301,7 +301,7 @@
       "schedule_cron": "0 17 * * 0",
       "prompt": "Update Weekly Metrics and post a weekly summary to Slack.\n\nStep 0 \u2014 Retrieve spreadsheet_id from memory. Use THAT spreadsheet for all operations.\n\n1. Count posts published this week from the Content Log\n2. Count total engagement actions (comments, reactions, connection requests) from the Content Log\n3. Note the top-performing post (based on any engagement signals you have)\n4. Update the Weekly Metrics sheet with this week's data\n5. Post a summary to Slack:\n   - Posts this week: [count]\n   - Engagement actions: [count]\n   - Top performer: [link]\n   - Streak: [days] days\n   - Connection requests sent: [count]\n   - Next week's content themes to explore\n6. Add 5 new content ideas to the Content Ideas sheet based on what worked this week\n",
       "output_channel": "",
-      "is_active": false
+      "is_active": true
     },
     {
       "name": "Daily Status Report",
@@ -313,15 +313,6 @@
       "is_active": true
     },
     {
-      "name": "Weekly Company Deep Research",
-      "description": "",
-      "schedule_human": "0 7 * * 1",
-      "schedule_cron": "0 7 * * 1",
-      "prompt": "Deep research refresh on the company AND competitive landscape. This is the foundation for the entire week's content \u2014 make it thorough.\n\nPart 1 \u2014 Company research:\n1. Use web search to read the company website thoroughly:\n   - Homepage \u2014 current positioning and messaging\n   - Product pages \u2014 features, capabilities, what's new\n   - About page \u2014 team, mission, story\n   - Blog \u2014 recent posts, announcements\n   - Pricing page \u2014 plans, model, any changes\n   - Case studies or testimonials \u2014 real customer stories and results\n2. Search the web for recent news about the company (last 7 days)\n3. Note any new features, metrics, customer stories, or positioning changes since last week\n\nPart 2 \u2014 Competitive landscape:\n4. Search for what 3-5 competitors have announced, published, or launched this week\n5. Identify gaps \u2014 what are competitors talking about that the user's company does better but isn't saying?\n6. Identify trends \u2014 what themes keep appearing across the industry?\n\nPart 3 \u2014 Content gap analysis:\n7. Search LinkedIn for the top 10 posts in the user's vertical from the past week\n8. What topics are getting the MOST engagement? What's oversaturated? What's missing?\n9. Identify 3-5 \"content gaps\" \u2014 topics the audience cares about that nobody is covering well\n\nPart 4 \u2014 Save everything:\nStep 0 \u2014 Retrieve spreadsheet_id from memory for all Sheets operations.\n10. Update your memory with:\n    - Company summary: what it does, who it serves, key differentiators\n    - Recent changes: new features, blog posts, announcements since last research\n    - Competitive intel: what competitors shipped or said this week\n    - Content gaps: topics with high demand but low supply in the vertical\n    - Voice notes: the language, framing, and terminology the company uses\n    - Top-performing content patterns from other creators this week\n11. Add 7 researched content ideas to the Content Ideas sheet \u2014 each with:\n    - Topic and angle\n    - Suggested format\n    - Suggested hook (first line)\n    - Why it will resonate (data gap, contrarian angle, trending topic, etc.)\n    - Company connection (how it ties back to the brand)\n",
-      "output_channel": "",
-      "is_active": true
-    },
-    {
       "name": "Trending Topics Scout",
       "description": "",
       "schedule_human": "0 7 * * 1-5",
@@ -329,6 +320,15 @@
       "prompt": "Scout for trending topics that can fuel viral content. This runs BEFORE the morning post routine \u2014 the best ideas from here should inform today's post.\n\nIMPORTANT: Include today's date or \"this week\" in all search queries to ensure fresh results. Only consider content published within the last 7 days. Verify publication dates before saving.\n\nStep 0 \u2014 Retrieve spreadsheet_id from memory for all Sheets operations.\n\nSearch Strategy (run at least 4 different searches):\n1. \"[user's vertical] news [current month year]\" \u2014 what's breaking right now?\n2. \"[user's vertical] debate OR controversy [this week]\" \u2014 what are people arguing about?\n3. \"[company's space] data OR research OR report [current month year]\" \u2014 any new numbers to cite?\n4. \"[industry leaders/competitors] announcement [this week]\" \u2014 what are key players doing?\n\nFor each finding, evaluate viral potential:\n- **High**: Breaking news nobody has commented on yet, surprising data, or a controversial take you can uniquely respond to\n- **Medium**: Interesting trend or report that can be tied to the company's expertise\n- **Low**: General industry news without a clear angle\n\nSave 3-5 timely content ideas to the Content Ideas sheet in Google Sheets with:\n- The topic/angle\n- Source link and publication date\n- Suggested post format (story, contrarian take, data insight, etc.)\n- Suggested hook (first line of the post)\n- Viral potential rating (High/Medium/Low)\n- Connection to the company's brand or product\n\nFlag any HIGH viral potential topics that should be posted about TODAY \u2014 speed matters for trending topics.\nIf something is truly breaking news (< 24 hours old), note it as urgent in memory so the Morning Post routine picks it up.\n",
       "output_channel": "",
       "is_active": true
+    },
+    {
+      "name": "Weekly Company Deep Research",
+      "description": "",
+      "schedule_human": "0 7 * * 1",
+      "schedule_cron": "0 7 * * 1",
+      "prompt": "Deep research refresh on the company AND competitive landscape. This is the foundation for the entire week's content \u2014 make it thorough.\n\nPart 1 \u2014 Company research:\n1. Use web search to read the company website thoroughly:\n   - Homepage \u2014 current positioning and messaging\n   - Product pages \u2014 features, capabilities, what's new\n   - About page \u2014 team, mission, story\n   - Blog \u2014 recent posts, announcements\n   - Pricing page \u2014 plans, model, any changes\n   - Case studies or testimonials \u2014 real customer stories and results\n2. Search the web for recent news about the company (last 7 days)\n3. Note any new features, metrics, customer stories, or positioning changes since last week\n\nPart 2 \u2014 Competitive landscape:\n4. Search for what 3-5 competitors have announced, published, or launched this week\n5. Identify gaps \u2014 what are competitors talking about that the user's company does better but isn't saying?\n6. Identify trends \u2014 what themes keep appearing across the industry?\n\nPart 3 \u2014 Content gap analysis:\n7. Search LinkedIn for the top 10 posts in the user's vertical from the past week\n8. What topics are getting the MOST engagement? What's oversaturated? What's missing?\n9. Identify 3-5 \"content gaps\" \u2014 topics the audience cares about that nobody is covering well\n\nPart 4 \u2014 Save everything:\nStep 0 \u2014 Retrieve spreadsheet_id from memory for all Sheets operations.\n10. Update your memory with:\n    - Company summary: what it does, who it serves, key differentiators\n    - Recent changes: new features, blog posts, announcements since last research\n    - Competitive intel: what competitors shipped or said this week\n    - Content gaps: topics with high demand but low supply in the vertical\n    - Voice notes: the language, framing, and terminology the company uses\n    - Top-performing content patterns from other creators this week\n11. Add 7 researched content ideas to the Content Ideas sheet \u2014 each with:\n    - Topic and angle\n    - Suggested format\n    - Suggested hook (first line)\n    - Why it will resonate (data gap, contrarian angle, trending topic, etc.)\n    - Company connection (how it ties back to the brand)\n",
+      "output_channel": "",
+      "is_active": false
     },
     {
       "name": "Afternoon Engagement Round",
