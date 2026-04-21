@@ -38,7 +38,12 @@ def _api(method, url, hdrs, timeout=15, **kwargs):
         if r.status_code == 429 and attempt < MAX_RETRIES:
             time.sleep(min(2 ** attempt, 30))
             continue
-        r.raise_for_status()
+        if r.status_code >= 400:
+            try:
+                detail = r.json()
+            except Exception:
+                detail = r.text[:500]
+            raise Exception(f"HTTP {r.status_code}: {json.dumps(detail) if isinstance(detail, dict) else detail}")
         return r.json()
 
 

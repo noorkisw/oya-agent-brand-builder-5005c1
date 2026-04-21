@@ -16,7 +16,7 @@ struct Main {
 
         let query = ChatQuery(
             messages: [.user(.init(content: .string("Hello")))],
-            model: "gemini/gemini-2.5-flash"
+            model: "anthropic/claude-sonnet-4-6"
         )
         let result = try await withCheckedThrowingContinuation { continuation in
             _ = client.chats(query: query) { continuation.resume(with: $0) }
