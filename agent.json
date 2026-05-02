@@ -284,8 +284,8 @@
     {
       "name": "Weekly Metrics Update",
       "description": "",
-      "schedule_human": "0 17 * * 0",
-      "schedule_cron": "0 17 * * 0",
+      "schedule_human": "Mon, Wed, Sun at 9:00 PM",
+      "schedule_cron": "0 1 * * 1,2,4",
       "prompt": "Weekly Health Clarity review. Pull from your own run history for the \nlast 7 days. No spreadsheet needed.\n\nReport a Slack summary with:\n\n1. **What shipped this week**\n   - LinkedIn posts published (count + list of angles used)\n   - Other routines that ran successfully\n   - Anything that failed or got skipped\n\n2. **What's coming up**\n   - Deadlines in the next 14 days (Startup Prize qualifier June 5-7, \n     portal deadline June 15, any other competitions or meetings \n     pinned in memory)\n   - Routines scheduled for the week ahead\n\n3. **Pattern check**\n   - Which post angles got used most? Which haven't been used in \n     2+ weeks? Suggest rotating in the unused ones.\n   - Any routine that ran but produced low-value output worth \n     reviewing?\n\n4. **One thing to focus on this week**\n   - The single highest-leverage thing the founder should prioritize, \n     based on upcoming deadlines and what hasn't been touched.\n\nFormat: Slack bullets. Under 300 words.\n\nHard rules:\n- No engagement metrics. No \"top performer.\" We don't have that data \n  yet and faking it is worse than skipping it.\n- If a section has nothing real, say \"nothing to flag\" and move on.\n- Move schedule to Mondays at 8 AM, not Sundays.",
       "output_channel": "C0AS3V4EN85",
       "is_active": true
