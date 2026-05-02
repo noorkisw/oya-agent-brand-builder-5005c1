@@ -329,10 +329,10 @@
     {
       "name": "Daily Status Report",
       "description": "",
-      "schedule_human": "0 18 * * *",
-      "schedule_cron": "0 18 * * *",
+      "schedule_human": "Daily at 9:00 PM",
+      "schedule_cron": "0 1 * * *",
       "prompt": "Daily check-in on Health Clarity's outbound activity. Pull from your \nown run history for the last 24 hours.\n\nReport:\n1. LinkedIn posts published today \u2014 paste the post content and note \n   the angle used (patient scenario, stat, behind-the-scenes, etc.)\n2. Other routines that ran \u2014 what they produced, anything notable\n3. Tomorrow's scheduled posts \u2014 what angle is queued based on the \n   rotation\n4. One thing the founder should look at today \u2014 a comment to reply \n   to, a competitor move from the weekly research, an outreach \n   follow-up, or a deadline approaching (Startup Prize: Health \n   qualifier June 5-7, portal deadline June 15)\n\nFormat: Slack-friendly. Bullets, not paragraphs. Under 200 words.\n\nHard rules:\n- If a post didn't publish, say so plainly. Don't invent engagement \n  numbers.\n- If there's nothing meaningful to flag in #4, say \"nothing urgent\" \n  and stop. Don't pad.\n- No emojis except one status indicator at the top: \n  \u2705 on track / \u26a0\ufe0f needs attention / \ud83d\udea9 blocked",
-      "output_channel": "",
+      "output_channel": "C0AS3V4EN85",
       "is_active": true
     },
     {
