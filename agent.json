@@ -282,6 +282,15 @@
   ],
   "routines": [
     {
+      "name": "Weekly Metrics Update",
+      "description": "",
+      "schedule_human": "0 17 * * 0",
+      "schedule_cron": "0 17 * * 0",
+      "prompt": "Weekly Health Clarity review. Pull from your own run history for the \nlast 7 days. No spreadsheet needed.\n\nReport a Slack summary with:\n\n1. **What shipped this week**\n   - LinkedIn posts published (count + list of angles used)\n   - Other routines that ran successfully\n   - Anything that failed or got skipped\n\n2. **What's coming up**\n   - Deadlines in the next 14 days (Startup Prize qualifier June 5-7, \n     portal deadline June 15, any other competitions or meetings \n     pinned in memory)\n   - Routines scheduled for the week ahead\n\n3. **Pattern check**\n   - Which post angles got used most? Which haven't been used in \n     2+ weeks? Suggest rotating in the unused ones.\n   - Any routine that ran but produced low-value output worth \n     reviewing?\n\n4. **One thing to focus on this week**\n   - The single highest-leverage thing the founder should prioritize, \n     based on upcoming deadlines and what hasn't been touched.\n\nFormat: Slack bullets. Under 300 words.\n\nHard rules:\n- No engagement metrics. No \"top performer.\" We don't have that data \n  yet and faking it is worse than skipping it.\n- If a section has nothing real, say \"nothing to flag\" and move on.\n- Move schedule to Mondays at 8 AM, not Sundays.",
+      "output_channel": "C0AS3V4EN85",
+      "is_active": true
+    },
+    {
       "name": "LinkedIn Engagement Round",
       "description": "",
       "schedule_human": "0 10 * * *",
@@ -297,15 +306,6 @@
       "schedule_cron": "0 1 * * 0,2,4",
       "prompt": "Weekly research refresh to inform Health Clarity's content and \npositioning. Health Clarity is a pre-revenue solo-founded AI platform \nthat translates medical documents into plain language for limited \nEnglish proficiency (LEP) patients. Built by an undergrad founder. \nNo paying customers yet. Target buyers are safety-net hospitals with \nhigh LEP populations, starting with Eskenazi Health and IU Health \nIndianapolis.\n\nPart 1 \u2014 Market and policy signals (last 7 days):\n1. Search for news on health literacy, LEP patient outcomes, language \n   access in healthcare, hospital readmissions tied to discharge \n   comprehension, and Section 1557 / language access compliance.\n2. Note any new CMS, ONC, or Joint Commission guidance touching \n   patient communication, translation, or health equity.\n3. Note any state-level Indiana healthcare news relevant to Eskenazi \n   or IU Health.\n\nPart 2 \u2014 Competitive landscape:\n4. Look at what these players are doing: Martti / UpHealth, \n   Propio Language Services, LanguageLine Solutions, Canopy Health, \n   AccessOnDemand, Jeenie. Also any new AI-native entrants in \n   medical translation or patient comprehension.\n5. For each, capture: are they translation-focused or comprehension-\n   focused? Do they require EHR integration? Who do they sell to?\n6. Identify the gap. The thesis is \"this is a comprehension problem, \n   not a translation problem.\" Who else is saying that? Who is stuck \n   on translation alone?\n\nPart 3 \u2014 Content gap analysis on LinkedIn:\n7. Search LinkedIn for top posts from the past week on: health equity, \n   LEP patients, hospital readmissions, patient experience, health \n   literacy, AI in healthcare for underserved populations.\n8. What's getting engagement? What's oversaturated (generic \"AI will \n   transform healthcare\" takes)? What angle is missing?\n9. Identify 3-5 content gaps the founder can credibly fill as a solo \n   undergrad builder working on this exact problem.\n\nPart 4 \u2014 Funding and ecosystem:\n10. Any new non-dilutive grants, accelerators, or pitch competitions \n    for health equity, digital health, or student founders announced \n    this week. Especially anything Indiana-based, Big Ten, or focused \n    on safety-net populations.\n\nPart 5 \u2014 Output:\nSave findings to run history with this structure:\n- Top 3 headlines the founder should know about (with links)\n- 1 competitive move that matters and why\n- 3 content angles to write about this week, ranked by credibility \n  fit and engagement potential\n- 1 funding or ecosystem opportunity to act on, if any\n- 1 thing to ignore (avoid chasing every shiny trend)\n\nHard rules:\n- If a section returns nothing real, say so. Do not pad.\n- Never invent stats, partnerships, or quotes.\n- Cite sources with links for every claim.\n- Keep the whole output under 800 words. This is a brief, not a \n  dissertation.",
       "output_channel": "C0AS3V4EN85",
-      "is_active": true
-    },
-    {
-      "name": "Weekly Metrics Update",
-      "description": "",
-      "schedule_human": "0 17 * * 0",
-      "schedule_cron": "0 17 * * 0",
-      "prompt": "Update Weekly Metrics and post a weekly summary to Slack.\n\nStep 0 \u2014 Retrieve spreadsheet_id from memory. Use THAT spreadsheet for all operations.\n\n1. Count posts published this week from the Content Log\n2. Count total engagement actions (comments, reactions, connection requests) from the Content Log\n3. Note the top-performing post (based on any engagement signals you have)\n4. Update the Weekly Metrics sheet with this week's data\n5. Post a summary to Slack:\n   - Posts this week: [count]\n   - Engagement actions: [count]\n   - Top performer: [link]\n   - Streak: [days] days\n   - Connection requests sent: [count]\n   - Next week's content themes to explore\n6. Add 5 new content ideas to the Content Ideas sheet based on what worked this week\n",
-      "output_channel": "",
       "is_active": true
     },
     {
