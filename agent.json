@@ -309,21 +309,21 @@
       "is_active": true
     },
     {
+      "name": "Trending Topics Scout",
+      "description": "",
+      "schedule_human": "Weekdays at 9:00 PM",
+      "schedule_cron": "0 1 * * 1-5",
+      "prompt": "Scout for timely content angles for Health Clarity. Runs before the \nmorning LinkedIn post.\n\nHealth Clarity context: AI platform translating medical documents into \nplain language for limited English proficiency (LEP) patients at \nsafety-net hospitals. Thesis: comprehension problem, not translation \nproblem.\n\nOnly consider content published in the last 7 days. Verify dates. \nSkip anything older.\n\nRun these 4 searches:\n1. \"LEP patients\" OR \"limited English proficiency\" healthcare [current \n   month year]\n2. \"health literacy\" OR \"patient comprehension\" hospital [this week]\n3. \"Section 1557\" OR \"language access\" healthcare [current month year]\n4. \"safety-net hospital\" OR \"Eskenazi\" OR \"IU Health\" news [this week]\n\nFor each finding, evaluate:\n- **High fit**: Directly about LEP, health literacy, or comprehension. \n  Founder can credibly comment as someone building a solution.\n- **Medium fit**: Adjacent (health equity, patient experience, \n  hospital readmissions). Needs an angle to connect to Health Clarity.\n- **Low fit**: General healthcare AI news without an LEP/comprehension \n  hook. Skip these.\n\nOutput to run history (no Sheets needed):\n- Top 2-3 High-fit findings with: source link, publication date, \n  one-sentence summary, suggested post angle, suggested first-line hook\n- 1 Medium-fit if it's worth stretching for\n- Skip Low-fit entirely. Don't pad.\n\nHard rules:\n- If nothing High-fit exists this week, say so. Better to skip a post \n  than force a weak one.\n- Never invent stats. Quote sources only.\n- Date-check every result. Articles older than 7 days are dropped.\n- Schedule: Mon / Wed / Fri at 6 AM (2 hours before the 8 AM LinkedIn \n  post), not daily.",
+      "output_channel": "",
+      "is_active": true
+    },
+    {
       "name": "Morning LinkedIn Post",
       "description": "",
       "schedule_human": "Mon, Wed, Fri at 11:00 AM",
       "schedule_cron": "0 15 * * 1,3,5",
       "prompt": "Generate a LinkedIn post for Health Clarity, an AI platform that \ntranslates medical documents into plain language for limited English \nproficiency (LEP) patients at safety-net hospitals.\n\nCore thesis: this is not a translation problem, it's a comprehension \nproblem. Hospitals create the gap with discharge papers, lab reports, \nand consent forms. We close it.\n\nRotate the angle each post. Pull from this pool:\n- A specific patient scenario (e.g., a Spanish-speaking diabetic \n  getting English-only insulin instructions)\n- A stat about LEP patients, readmissions, or health literacy\n- A behind-the-scenes note on building solo as an undergrad founder\n- A reaction to a healthcare equity headline\n- A reframe of how hospitals think about translation vs comprehension\n- A short story from the build (a bug, a feature, a hospital convo)\n\nVoice: solo founder, undergrad at IU Indianapolis Kelley, direct, \nno jargon, no corporate tone. Confident but not arrogant. First person. \nNo em dashes. No \"in today's fast-paced world\" style openings.\n\nStructure:\n- Hook on line 1 that earns the \"see more\" click\n- 2-4 short paragraphs, 1-3 sentences each\n- End with a sharp question or observation, not a generic CTA\n- 150-250 words total\n\nHard rules:\n- Max 3 hashtags, all lowercase\n- Max 1 emoji, only if it actually adds something\n- No buzzwords: revolutionary, game-changing, synergy, leverage, unlock\n- Mention healthclarity.net only when it fits naturally, not every post\n- Never invent stats, hospital partnerships, or user testimonials",
       "output_channel": "C0AS3V4EN85",
-      "is_active": true
-    },
-    {
-      "name": "Trending Topics Scout",
-      "description": "",
-      "schedule_human": "0 7 * * 1-5",
-      "schedule_cron": "0 7 * * 1-5",
-      "prompt": "Scout for trending topics that can fuel viral content. This runs BEFORE the morning post routine \u2014 the best ideas from here should inform today's post.\n\nIMPORTANT: Include today's date or \"this week\" in all search queries to ensure fresh results. Only consider content published within the last 7 days. Verify publication dates before saving.\n\nStep 0 \u2014 Retrieve spreadsheet_id from memory for all Sheets operations.\n\nSearch Strategy (run at least 4 different searches):\n1. \"[user's vertical] news [current month year]\" \u2014 what's breaking right now?\n2. \"[user's vertical] debate OR controversy [this week]\" \u2014 what are people arguing about?\n3. \"[company's space] data OR research OR report [current month year]\" \u2014 any new numbers to cite?\n4. \"[industry leaders/competitors] announcement [this week]\" \u2014 what are key players doing?\n\nFor each finding, evaluate viral potential:\n- **High**: Breaking news nobody has commented on yet, surprising data, or a controversial take you can uniquely respond to\n- **Medium**: Interesting trend or report that can be tied to the company's expertise\n- **Low**: General industry news without a clear angle\n\nSave 3-5 timely content ideas to the Content Ideas sheet in Google Sheets with:\n- The topic/angle\n- Source link and publication date\n- Suggested post format (story, contrarian take, data insight, etc.)\n- Suggested hook (first line of the post)\n- Viral potential rating (High/Medium/Low)\n- Connection to the company's brand or product\n\nFlag any HIGH viral potential topics that should be posted about TODAY \u2014 speed matters for trending topics.\nIf something is truly breaking news (< 24 hours old), note it as urgent in memory so the Morning Post routine picks it up.\n",
-      "output_channel": "",
       "is_active": true
     },
     {
