@@ -291,15 +291,6 @@
       "is_active": false
     },
     {
-      "name": "Morning LinkedIn Post",
-      "description": "",
-      "schedule_human": "Daily at 8:00 AM",
-      "schedule_cron": "0 12 * * *",
-      "prompt": "Generate a LinkedIn post for Health Clarity, an AI platform that \ntranslates medical documents into plain language for limited English \nproficiency (LEP) patients at safety-net hospitals.\n\nCore thesis: this is not a translation problem, it's a comprehension \nproblem. Hospitals create the gap with discharge papers, lab reports, \nand consent forms. We close it.\n\nRotate the angle each post. Pull from this pool:\n- A specific patient scenario (e.g., a Spanish-speaking diabetic \n  getting English-only insulin instructions)\n- A stat about LEP patients, readmissions, or health literacy\n- A behind-the-scenes note on building solo as an undergrad founder\n- A reaction to a healthcare equity headline\n- A reframe of how hospitals think about translation vs comprehension\n- A short story from the build (a bug, a feature, a hospital convo)\n\nVoice: solo founder, undergrad at IU Indianapolis Kelley, direct, \nno jargon, no corporate tone. Confident but not arrogant. First person. \nNo em dashes. No \"in today's fast-paced world\" style openings.\n\nStructure:\n- Hook on line 1 that earns the \"see more\" click\n- 2-4 short paragraphs, 1-3 sentences each\n- End with a sharp question or observation, not a generic CTA\n- 150-250 words total\n\nHard rules:\n- Max 3 hashtags, all lowercase\n- Max 1 emoji, only if it actually adds something\n- No buzzwords: revolutionary, game-changing, synergy, leverage, unlock\n- Mention healthclarity.net only when it fits naturally, not every post\n- Never invent stats, hospital partnerships, or user testimonials",
-      "output_channel": "C0AS3V4EN85",
-      "is_active": true
-    },
-    {
       "name": "Weekly Company Deep Research",
       "description": "",
       "schedule_human": "0 7 * * 1",
@@ -315,6 +306,15 @@
       "schedule_cron": "0 17 * * 0",
       "prompt": "Update Weekly Metrics and post a weekly summary to Slack.\n\nStep 0 \u2014 Retrieve spreadsheet_id from memory. Use THAT spreadsheet for all operations.\n\n1. Count posts published this week from the Content Log\n2. Count total engagement actions (comments, reactions, connection requests) from the Content Log\n3. Note the top-performing post (based on any engagement signals you have)\n4. Update the Weekly Metrics sheet with this week's data\n5. Post a summary to Slack:\n   - Posts this week: [count]\n   - Engagement actions: [count]\n   - Top performer: [link]\n   - Streak: [days] days\n   - Connection requests sent: [count]\n   - Next week's content themes to explore\n6. Add 5 new content ideas to the Content Ideas sheet based on what worked this week\n",
       "output_channel": "",
+      "is_active": true
+    },
+    {
+      "name": "Morning LinkedIn Post",
+      "description": "",
+      "schedule_human": "Tue at 11:00 AM",
+      "schedule_cron": "0 15 * * 2",
+      "prompt": "Generate a LinkedIn post for Health Clarity, an AI platform that \ntranslates medical documents into plain language for limited English \nproficiency (LEP) patients at safety-net hospitals.\n\nCore thesis: this is not a translation problem, it's a comprehension \nproblem. Hospitals create the gap with discharge papers, lab reports, \nand consent forms. We close it.\n\nRotate the angle each post. Pull from this pool:\n- A specific patient scenario (e.g., a Spanish-speaking diabetic \n  getting English-only insulin instructions)\n- A stat about LEP patients, readmissions, or health literacy\n- A behind-the-scenes note on building solo as an undergrad founder\n- A reaction to a healthcare equity headline\n- A reframe of how hospitals think about translation vs comprehension\n- A short story from the build (a bug, a feature, a hospital convo)\n\nVoice: solo founder, undergrad at IU Indianapolis Kelley, direct, \nno jargon, no corporate tone. Confident but not arrogant. First person. \nNo em dashes. No \"in today's fast-paced world\" style openings.\n\nStructure:\n- Hook on line 1 that earns the \"see more\" click\n- 2-4 short paragraphs, 1-3 sentences each\n- End with a sharp question or observation, not a generic CTA\n- 150-250 words total\n\nHard rules:\n- Max 3 hashtags, all lowercase\n- Max 1 emoji, only if it actually adds something\n- No buzzwords: revolutionary, game-changing, synergy, leverage, unlock\n- Mention healthclarity.net only when it fits naturally, not every post\n- Never invent stats, hospital partnerships, or user testimonials",
+      "output_channel": "C0AS3V4EN85",
       "is_active": true
     },
     {
